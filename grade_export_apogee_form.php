@@ -102,11 +102,11 @@ class grade_export_apogee_form extends moodleform
                 if ($pattern) {
                     if (preg_match($pattern, $user->email)) {
                         // The user email address matches with the pattern => we add the users the selection list.
-                        $users[$user->idnumber] = fullname($user);
+                        $users[$user->id] = fullname($user);
                     }
                 } else {
                     // There isn't a defined pattern => we add the users the selection list.
-                    $users[$user->idnumber] = fullname($user);
+                    $users[$user->id] = fullname($user);
                 }
             }
         }
