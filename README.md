@@ -34,6 +34,10 @@ This option will determine the type of mapping used to match users from the give
 
 This option will allow to define a regular expression on email address to filter users who need to display in the form.
 
+> Site administration -> Grades -> Export settings -> File for Apogée -> auth_criteria
+
+This option will allow to define authentification methods to use to filter users who need to display in the form. Be careful, if there is not selected method users won't be displayed.<br/>
+Until plugin version v4.2-r2 (build 2024031100) only cas and ldap methods were used to filter displayed users in the form.
 
   
 Description / Working

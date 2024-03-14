@@ -34,6 +34,10 @@ Cette option vous permet de déterminer sur quelles informations effectuer la co
 
 Cette option vous permet de définir une expression régulière sur l'adresse mail pour identifier les utilisateurs à afficher dans le formulaire.
 
+> Administration du site -> Notes -> Réglages d'exportation -> Fichier pour Apogée -> auth_criteria
+
+Cette option vous permet de sélectionner les méthodes d'authentification utilisées pour identifier les utilisateurs à afficher dans le formulaire. Attention, si la sélection est vide, aucun utilisateur ne sera remonté dans la liste.<br/>
+Avant la version v4.2-r2 (build 2024031100) seules les méthodes d'authentification cas et ldap étaient prises en comptes sur cette sélection.
   
   
 Description / Utilisation
@@ -60,4 +64,4 @@ To do / Améliorations possibles
 
 A propos
 ------
-<a href="https://www.uca.fr">Université Clermont Auvergne</a> - 2023
+<a href="https://www.uca.fr">Université Clermont Auvergne</a> - 2024
