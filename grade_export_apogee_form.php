@@ -93,10 +93,11 @@ class grade_export_apogee_form extends moodleform
         // Attendance.
         $coursecontext = context_course::instance($COURSE->id);
         $users = [];
+        $auth_plugins = explode(',', get_config('gradeexport_apogee', 'auth_criteria'));
         foreach (get_enrolled_users($coursecontext, 'moodle/block:view') as $user) {
             // Check if enrolled user is a student (to be found in Apogee).
-            // We make a pre filter with cas/ldap users.
-            if ($user->auth == "cas" || $user->auth == "ldap") {
+            // We make a pre filter with users with auth methods selected in administration.
+            if (in_array($user->auth, $auth_plugins)) {
                 // Check the pattern of email addresse defined in config to identify students.
                 $pattern = get_config('gradeexport_apogee', 'email_regexp_criteria');
                 if ($pattern) {

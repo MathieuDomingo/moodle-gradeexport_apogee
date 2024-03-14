@@ -52,4 +52,17 @@ if ($hassiteconfig) {
         get_string('email_regexp_criteria_desc', 'gradeexport_apogee'),
         '/.+@etu\.yourdomain\.com$/'
     ));
+
+    $auth_plugins = [];
+    foreach (get_enabled_auth_plugins() as $plugin) {
+        $auth_plugins[$plugin] = get_auth_plugin($plugin)->get_title();
+    }
+    $settings->add(new admin_setting_configmultiselect(
+        'gradeexport_apogee/auth_criteria',
+        get_string('auth_criteria', 'gradeexport_apogee'),
+        get_string('auth_criteria_desc', 'gradeexport_apogee'),
+        ['cas', 'ldap'],
+        $auth_plugins
+    ));
+
 }

@@ -47,6 +47,8 @@ $string['mapping_type_name'] = 'Nom-prénom';
 $string['mapping_type_idnumber'] = 'Numéro étudiant-Numéro d\'identification';
 $string['email_regexp_criteria'] = 'Critère de tri sur l\'adresse email';
 $string['email_regexp_criteria_desc'] = 'Expression régulière définie sur l\'adresse mail pour filtrer les utilisateurs à afficher dans la sélection. Si laissé vide alors aucun filtre ne sera appliqué.';
+$string['auth_criteria'] = 'Crtitère de tri sur la méthode d\'authentification';
+$string['auth_criteria_desc'] = 'Méthodes d\'authentification à utiliser pour filtrer les utilisateurs à afficher dans la sélection. Si laissé vide alors aucun étudiant ne sera remonté.';
 
 $string['attendance'] = 'Gestion des absences';
 $string['attendance_desc'] = '<div class="alert alert-info">Grâce aux deux champs de sélection suivants vous pouvez identifier les étudiants absents. En fonction du type d\'absence la bonne valeur sera donnée pour la saisie dans Apogée:

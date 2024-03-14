@@ -47,6 +47,8 @@ $string['mapping_type_name'] = 'Lastname-firstname';
 $string['mapping_type_idnumber'] = 'Student number-Id number';
 $string['email_regexp_criteria'] = 'Sort criteria on email address';
 $string['email_regexp_criteria_desc'] = 'Regular expression defined on users\' email address to filter users to display in the form. If the field is empty no filter will be applied.';
+$string['auth_criteria'] = 'Sort criteria on authentification';
+$string['auth_criteria_desc'] = 'Authentification methods to take to sort students. If empty no student will be displayed.';
 
 $string['attendance'] = 'Attendance management';
 $string['attendance_desc'] = '<div class="alert alert-info">With the two selection fields below you can identify absent students. In function of the type of their non attendance a value will be added for the import in Apogée:
