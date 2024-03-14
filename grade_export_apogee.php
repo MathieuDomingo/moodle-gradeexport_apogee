@@ -114,11 +114,11 @@ class grade_export_apogee extends grade_export {
                 catch (Exception $e) { continue; }
 
                 if ($user) {
-                    if (in_array($user->id, $this->datas->abi)) {
+                    if (isset($this->datas->abi) && in_array($user->id, $this->datas->abi)) {
                         // Update of the content with no bareme and specific "ABI" note of this user.
                         $row[4] = "ABI";
                         $row[5] = "";
-                    } elseif (in_array($user->id, $this->datas->abj)) {
+                    } elseif (isset($this->datas->abj) && in_array($user->id, $this->datas->abj)) {
                         // Update of the content with no bareme and specific "ABJ" note of this user.
                         $row[4] = "ABJ";
                         $row[5] = "";
