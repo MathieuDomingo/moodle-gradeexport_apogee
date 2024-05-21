@@ -129,9 +129,15 @@ class grade_export_apogee extends grade_export {
                                 AND finalgrade IS NOT NULL';
                         $grade = $DB->get_record_sql($sql, array('item' => $item->id, 'user' => $user->id));
                         if ($grade) {
-                            // Update of the content with the item bareme and the item grade of this user.
-                            $row[4] = round($grade->finalgrade, 3);
-                            $row[5] = round($bareme);
+                            if($item->gradetype == 2 and item->grademin==1 and item->grademax==2){ //cas particulier pour gerer du APC : Acquis / Non Acquis
+                                    $row[4] = $grade->finalgrade== 1 ? "ACQ" : "NACQ";
+                                    $row[5] = "ACQ/NACQ";
+                            }
+                            else{
+                                    // Update of the content with the item bareme and the item grade of this user.
+                                    $row[4] = round($grade->finalgrade, 3);
+                                    $row[5] = round($bareme);
+                            }
                         }
                     }
                 }
