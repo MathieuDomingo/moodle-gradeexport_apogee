@@ -130,7 +130,7 @@ class grade_export_apogee extends grade_export {
                         $grade = $DB->get_record_sql($sql, array('item' => $item->id, 'user' => $user->id));
                         if ($grade) {
                             if($item->gradetype == 2 and $item->grademin==1 and $item->grademax==2){ //cas particulier pour gerer du APC : Acquis / Non Acquis
-                                    $row[4] = $grade->finalgrade== 1 ? "ACQ" : "NACQ";
+                                    $row[4] = $grade->finalgrade== 2 ? "ACQ" : "NACQ";
                                     $row[5] = "ACQ/NACQ";
                             }
                             else{
